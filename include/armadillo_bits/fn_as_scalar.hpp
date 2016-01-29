@@ -1,9 +1,11 @@
-// Copyright (C) 2010-2015 Conrad Sanderson
-// Copyright (C) 2010-2015 NICTA (www.nicta.com.au)
+// Copyright (C) 2010-2015 National ICT Australia (NICTA)
 // 
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
+// -------------------------------------------------------------------
+// 
+// Written by Conrad Sanderson - http://conradsanderson.id.au
 
 
 //! \addtogroup fn_as_scalar
@@ -311,7 +313,7 @@ as_scalar(const Glue<T1, T2, glue_times>& X, const typename arma_not_cx<typename
     {
     const sword N_mat = 1 + depth_lhs< glue_times, Glue<T1,T2,glue_times> >::num;
     
-    arma_extra_debug_print(arma_boost::format("N_mat = %d") % N_mat);
+    arma_extra_debug_print(arma_str::format("N_mat = %d") % N_mat);
     
     return as_scalar_redirect<N_mat>::apply(X);
     }
